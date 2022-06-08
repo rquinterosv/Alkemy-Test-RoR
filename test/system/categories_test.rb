@@ -14,7 +14,6 @@ class CategoriesTest < ApplicationSystemTestCase
     visit categories_url
     click_on "New Category"
 
-    fill_in "Movie", with: @category.movie_id
     fill_in "Name", with: @category.name
     click_on "Create Category"
 
@@ -26,7 +25,6 @@ class CategoriesTest < ApplicationSystemTestCase
     visit categories_url
     click_on "Edit", match: :first
 
-    fill_in "Movie", with: @category.movie_id
     fill_in "Name", with: @category.name
     click_on "Update Category"
 

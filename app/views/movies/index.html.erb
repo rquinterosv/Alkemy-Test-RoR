@@ -5,10 +5,9 @@
 <table>
   <thead>
     <tr>
-      <th>Image</th>
       <th>Title</th>
       <th>Date</th>
-      <th>Character</th>
+      <th>Category</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,10 +15,9 @@
   <tbody>
     <% @movies.each do |movie| %>
       <tr>
-        <td><%= movie.image %></td>
         <td><%= movie.title %></td>
         <td><%= movie.date %></td>
-        <td><%= movie.character_id %></td>
+        <td><%= movie.category_id %></td>
         <td><%= link_to 'Show', movie %></td>
         <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
         <td><%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' } %></td>

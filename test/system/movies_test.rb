@@ -14,9 +14,8 @@ class MoviesTest < ApplicationSystemTestCase
     visit movies_url
     click_on "New Movie"
 
-    fill_in "Character", with: @movie.character_id
+    fill_in "Category", with: @movie.category_id
     fill_in "Date", with: @movie.date
-    fill_in "Image", with: @movie.image
     fill_in "Title", with: @movie.title
     click_on "Create Movie"
 
@@ -28,9 +27,8 @@ class MoviesTest < ApplicationSystemTestCase
     visit movies_url
     click_on "Edit", match: :first
 
-    fill_in "Character", with: @movie.character_id
+    fill_in "Category", with: @movie.category_id
     fill_in "Date", with: @movie.date
-    fill_in "Image", with: @movie.image
     fill_in "Title", with: @movie.title
     click_on "Update Movie"
 

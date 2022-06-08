@@ -12,23 +12,18 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :image %>
-    <%= form.text_field :image %>
-  </div>
-
-  <div class="field">
     <%= form.label :title %>
     <%= form.text_field :title %>
   </div>
 
   <div class="field">
     <%= form.label :date %>
-    <%= form.text_field :date %>
+    <%= form.date_select :date %>
   </div>
 
   <div class="field">
-    <%= form.label :character_id %>
-    <%= form.text_field :character_id %>
+    <%= form.label :category_id %>
+    <%= form.select :category_id, Category.pluck(:name, :id)%>
   </div>
 
   <div class="actions">

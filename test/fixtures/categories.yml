@@ -2,8 +2,6 @@
 
 one:
   name: MyString
-  movie: one
 
 two:
   name: MyString
-  movie: two
