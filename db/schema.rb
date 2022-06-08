@@ -10,12 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_08_025111) do
+ActiveRecord::Schema.define(version: 2022_06_08_025835) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "characters", force: :cascade do |t|
+    t.string "image"
+    t.string "name"
+    t.integer "age"
+    t.decimal "weight"
+    t.text "history"
+    t.integer "movie_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["movie_id"], name: "index_characters_on_movie_id"
   end
 
   create_table "movies", force: :cascade do |t|
@@ -39,5 +51,6 @@ ActiveRecord::Schema.define(version: 2022_06_08_025111) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "characters", "movies"
   add_foreign_key "movies", "categories"
 end

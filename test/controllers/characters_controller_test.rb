@@ -17,7 +17,7 @@ class CharactersControllerTest < ActionDispatch::IntegrationTest
 
   test "should create character" do
     assert_difference('Character.count') do
-      post characters_url, params: { character: { age: @character.age, history: @character.history, name: @character.name, title: @character.title, weight: @character.weight } }
+      post characters_url, params: { character: { age: @character.age, history: @character.history, image: @character.image, movie_id: @character.movie_id, name: @character.name, weight: @character.weight } }
     end
 
     assert_redirected_to character_url(Character.last)
@@ -34,7 +34,7 @@ class CharactersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update character" do
-    patch character_url(@character), params: { character: { age: @character.age, history: @character.history, name: @character.name, title: @character.title, weight: @character.weight } }
+    patch character_url(@character), params: { character: { age: @character.age, history: @character.history, image: @character.image, movie_id: @character.movie_id, name: @character.name, weight: @character.weight } }
     assert_redirected_to character_url(@character)
   end
 

@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Imagen:</strong>
+  <strong>Image:</strong>
   <%= @character.image %>
 </p>
 
@@ -23,6 +23,11 @@
 <p>
   <strong>History:</strong>
   <%= @character.history %>
+</p>
+
+<p>
+  <strong>Movie:</strong>
+  <%= @character.movie_id %>
 </p>
 
 <%= link_to 'Edit', edit_character_path(@character) %> |

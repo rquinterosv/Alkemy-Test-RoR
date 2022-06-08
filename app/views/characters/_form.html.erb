@@ -36,6 +36,11 @@
     <%= form.text_area :history %>
   </div>
 
+  <div class="field">
+    <%= form.label :movie_id %>
+    <%= form.select :movie_id, Movie.pluck(:title, :id) %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

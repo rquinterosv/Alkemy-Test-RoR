@@ -16,8 +16,9 @@ class CharactersTest < ApplicationSystemTestCase
 
     fill_in "Age", with: @character.age
     fill_in "History", with: @character.history
+    fill_in "Image", with: @character.image
+    fill_in "Movie", with: @character.movie_id
     fill_in "Name", with: @character.name
-    fill_in "Title", with: @character.title
     fill_in "Weight", with: @character.weight
     click_on "Create Character"
 
@@ -31,8 +32,9 @@ class CharactersTest < ApplicationSystemTestCase
 
     fill_in "Age", with: @character.age
     fill_in "History", with: @character.history
+    fill_in "Image", with: @character.image
+    fill_in "Movie", with: @character.movie_id
     fill_in "Name", with: @character.name
-    fill_in "Title", with: @character.title
     fill_in "Weight", with: @character.weight
     click_on "Update Character"
 
