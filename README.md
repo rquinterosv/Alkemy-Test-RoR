@@ -22,3 +22,16 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+
+
+* Se crea devise
+
+* Se crea personaje
+    Imagen 
+    Nombre
+    Edad
+    Peso
+    Historia
+    Peliculas Asociadas
