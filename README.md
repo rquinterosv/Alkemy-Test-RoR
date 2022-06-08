@@ -35,3 +35,8 @@ Things you may want to cover:
     Peso
     Historia
     Peliculas Asociadas
+
+* Se crea listado de peliculas
+    imagen 
+    titulo 
+    fecha creacion
