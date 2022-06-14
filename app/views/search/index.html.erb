@@ -1,0 +1,19 @@
+<h1 class="text-center"><%= pluralize(@movies.count,  "Results")%></h1>
+
+
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th><%= sort_link(@query, :title, "Title", default_order: :asc)%></th>    
+            </tr>
+        </thead>
+        <tbody>
+            <%@movies.each do |movie|%>
+                <tr>
+                    <th><%=link_to movie.title%></th>
+                </tr>
+            <%end%>
+        </tbody>
+    </table>
+</div>
